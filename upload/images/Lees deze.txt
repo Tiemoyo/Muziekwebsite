@@ -1,0 +1,7 @@
+Maak een mapje genaamd 'Images' aan en doe deze in hetzelde mapje als de index.php
+
+Verder heb ik upload_tmp_dir veranderd naar 'upload_tmp_dir="C:\localhost\php\upload-tmp-dir' in php.ini!
+
+Als het goed is zal de geuploade afbeelding verschijnen in het mapje Images.
+
+Moeten nog even kijken waar we deze functie in willen implementeren.
