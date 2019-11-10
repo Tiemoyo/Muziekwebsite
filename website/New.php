@@ -19,10 +19,10 @@
     <?php
     require_once ('private/DB.php');
 
-    $query = "SELECT * FROM articles;";
+    $query = "SELECT * FROM articles WHERE Uploaddate <= CURRNT_DATE;";
     $result = mysqli_query($con, $query);
     while ($fetch = mysqli_fetch_assoc($result)){
-        echo'<a href="Article.php?art='. $fetch['Article_ID'] .'" class="product_container" >
+        echo'<a href="Article.php?article='. $fetch['Article_ID'] .'" class="product_container" >
                 <img src="img/' . $fetch['Thumbnail'] . '" alt=>
                 <div>
                     <h2>
