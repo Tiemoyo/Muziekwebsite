@@ -1,6 +1,7 @@
 <?php 
     require ('header.php');
     require ('private/DB.php');
+    
     $query = "SELECT * FROM articles A
               LEFT OUTER JOIN accounts AC ON AC.User_ID = A.User_ID
               WHERE A.Article_ID =" . mysqli_real_escape_string($con, $_GET['article']) .";";

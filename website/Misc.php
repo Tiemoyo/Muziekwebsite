@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>overig</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/products.css">
-    <style>
-    .current_page{
-        background-color: #003153;
-    }
-    </style>
 </head>
 
 <body>
@@ -23,17 +18,7 @@
     $query = "SELECT * FROM articles WHERE Articlegroup_ID = 1;";
     $result = mysqli_query($con, $query);
     while ($fetch = mysqli_fetch_assoc($result)){
-        echo'<a href="Article.php?article='. $fetch['Article_ID'] .'" class="product_container" >
-                <img src="img/' . $fetch['Thumbnail'] . '" alt=>
-                <div>
-                    <h2>
-                    ' . $fetch['Title'] . ' 
-                    </h2>
-                    <p>
-                    $' . $fetch['Price'] . '
-                    </p>
-                </div>
-            </a>';
+        include ('private/GetProducts.php');
     }
     ?>
 

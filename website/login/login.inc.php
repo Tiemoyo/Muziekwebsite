@@ -14,12 +14,14 @@ if (mysqli_num_rows($result) < 1){
     if ($passcheck == false){
         echo "wrong password";
     }else{
+        session_destroy();
         session_start();
 
         $_SESSION['User_ID'] = $row ['User_ID'];
         $_SESSION['Role_ID'] = $row ['Role_ID'];
         $_SESSION['Username'] = $row ['UserName'];
-
+        
+        header('location: ../index.php');
     }
 }
 
